@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const multer = require("multer");
+const cors = require('cors');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -46,8 +47,19 @@ let setCache = (req, res, next) => {
     next();
 }
 
-// Applying middleware
-app.use(setCache);
+// Applying middleware for endpoint path: '/time'
+app.use('/time', setCache);
+
+//Applying middleware CORS for all endpoints
+app.use(cors());
+
+// Setting a middleware as a Callback and aplying it for Authorization for endpoint path: '/time'
+app.use('/time', (req, res, next) => {
+  if (!req.headers.authorization) {
+    return res.status(401).send("Unauthorized HTTP Request");
+  }
+  next();
+});
 
 // Endpoints
 app.get("/", (req, res) => {
@@ -70,7 +82,8 @@ app.post("/upload", upload.single("image"), (req, res, next) => {
   res.send("Image Uploaded");
 });
 
-app.post("/time", (req, res) => {
+app.post("/time", express.json(), (req, res) => {
+  console.log("Input from requester: ", req.body);
     const addZero = (i) => {
         if (i < 10) {
             i = "0" + i;
