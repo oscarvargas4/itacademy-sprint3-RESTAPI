@@ -36,9 +36,9 @@ Follow the steps below:
   npm install
   ```
 * Install HTTP Requests on Postman:
-  1. Open Postman
-  1. File -> Import -> Upload File: "./postmanRequests/postman.JSON" from this porject
-  1. Keep Postman open in order to do the HTTP requests
+1. Open Postman
+2. File -> Import -> Upload File: "./postmanRequests/postman.JSON" from this porject
+3. Keep Postman open in order to do the HTTP requests
 * Run the command for execute the app (Be sure your terminal is located in $/nodeRestServer file):
   ```
   node src/app.js
