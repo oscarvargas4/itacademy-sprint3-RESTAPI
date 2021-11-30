@@ -13,6 +13,7 @@ app.set("views", path.join(__dirname, "../public/views"));
 // Applying middlewares for endpoint path: '/time'
 app.use("/time", setCache);
 app.use("/time", auth);
+
 // Applying middleware CORS for all endpoints
 app.use(cors());
 
