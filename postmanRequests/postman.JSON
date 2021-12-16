@@ -1,1 +1,81 @@
-{"info":{"_postman_id":"08c02525-b296-4039-9117-37307eec1c19","name":"IT Academy-Sprint4-Rest API","schema":"https://schema.getpostman.com/json/collection/v2.0.0/collection.json"},"item":[{"name":"time","id":"9cb4ae11-b9b4-4ee5-8839-a7b149ce216c","request":{"auth":{"type":"basic","basic":{"username":"ITacademy","password":"ITacademy","showPassword":false}},"method":"POST","header":[],"body":{"mode":"raw","raw":"{\r\n    \"name\": \"Oscar\"\r\n}","options":{"raw":{"language":"json"}}},"url":"localhost:3000/time"},"response":[]},{"name":"upload","id":"530bc044-8c67-4fda-9cad-6ffa34a4cad5","request":{"method":"POST","header":[],"body":{"mode":"formdata","formdata":[]},"url":"localhost:3000/upload"},"response":[]}]}
+{
+	"info": {
+		"_postman_id": "5760ceff-622d-421a-ae64-deaf9a80e8e3",
+		"name": "IT Academy-Sprint4-Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "time",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "ITacademy",
+						"password": "ITacademy",
+						"showPassword": false
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Oscar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/time"
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/formacio/Downloads/sprint4.2-dices/.gitignore"
+						}
+					]
+				},
+				"url": "localhost:3000/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "See User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/user"
+			},
+			"response": []
+		},
+		{
+			"name": "See Home Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/"
+			},
+			"response": []
+		},
+		{
+			"name": "FrondeEnd router to upload image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/upload"
+			},
+			"response": []
+		}
+	]
+}
