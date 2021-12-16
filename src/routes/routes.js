@@ -1,6 +1,11 @@
 const express = require("express");
+const { setCache, auth } = require("../middlewares/middleware");
 const router = express.Router();
 const { upload } = require("../multer/multer");
+
+// Applying middlewares for endpoint path: '/time'
+router.use("/time", setCache);
+router.use("/time", auth);
 
 // Endpoints
 router.get("/", (req, res) => {
