@@ -41,7 +41,7 @@ Follow the steps below:
 3. Keep Postman open in order to do the HTTP requests
 * Run the command for execute the app (Be sure your terminal is located in $/nodeRestServer file):
   ```
-  node src/app.js
+  npm run dev
   ```
 
 

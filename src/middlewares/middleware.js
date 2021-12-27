@@ -11,9 +11,9 @@ let setCache = (req, res, next) => {
 
 // Setting middleware for Authorization for endpoint path: '/time'
 let auth = (req, res, next) => {
-  if (!req.headers.authorization) {
-    return res.status(401).send("Unauthorized HTTP Request");
-  }
+  if (req.headers.authorization == "Basic Og==" || req.body.name == "" || !req.body.name) {
+    return res.status(401).json({ "Error": "Unauthorized HTTP Request" });
+  } 
   next();
 }
 
