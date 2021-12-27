@@ -5,6 +5,7 @@ const { upload } = require("../multer/multer");
 
 // Applying middlewares for endpoint path: '/time'
 router.use("/time", setCache);
+router.use("/time", express.json());
 router.use("/time", auth);
 
 // Endpoints
