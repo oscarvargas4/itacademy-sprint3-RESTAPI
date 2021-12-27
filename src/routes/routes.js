@@ -26,11 +26,14 @@ router.get("/upload", (req, res) => {
   res.render("index");
 });
 
-router.post("/upload", upload.single("image"), (error, req, res, next) => {
+router.post("/upload", upload.single("image"), (req, res, next) => {
   if (req.body == undefined) {
-    res.status(400).json({ Error: "Image not selected" });
-  } else if (error) {
-    res.status(400).json({ Error: "Only .png .jpg and .gif format allowed!" });
+    res
+      .status(400)
+      .json({
+        Error:
+          "Image not selected or wrong image format (Only .png .jpg and .gif format allowed!)",
+      });
   } else {
     res.status(201).json({ Status: "Image Uploaded" });
   }

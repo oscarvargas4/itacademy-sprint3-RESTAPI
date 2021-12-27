@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "5760ceff-622d-421a-ae64-deaf9a80e8e3",
+		"_postman_id": "a8cb3b02-722d-495b-bf88-804811882513",
 		"name": "IT Academy-Sprint4-Rest API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -10,11 +10,23 @@
 			"request": {
 				"auth": {
 					"type": "basic",
-					"basic": {
-						"username": "ITacademy",
-						"password": "ITacademy",
-						"showPassword": false
-					}
+					"basic": [
+						{
+							"key": "password",
+							"value": "ITacademy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ITacademy",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [],
@@ -27,7 +39,16 @@
 						}
 					}
 				},
-				"url": "localhost:3000/time"
+				"url": {
+					"raw": "localhost:3000/time",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time"
+					]
+				}
 			},
 			"response": []
 		},
@@ -42,11 +63,32 @@
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/C:/Users/formacio/Downloads/sprint4.2-dices/.gitignore"
+							"src": "/C:/Users/formacio/Downloads/sprint4.2-dices/.gitignore",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/oscar/Desktop/itacademy-node/4.1 Sprint 4. NodeRestServer/src/uploads/image-1637656171766.gif",
+							"disabled": true
 						}
-					]
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
-				"url": "localhost:3000/upload"
+				"url": {
+					"raw": "localhost:3000/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload"
+					]
+				}
 			},
 			"response": []
 		},
@@ -55,7 +97,16 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "localhost:3000/user"
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
 			},
 			"response": []
 		},
@@ -64,7 +115,16 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "localhost:3000/"
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -73,7 +133,16 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "localhost:3000/upload"
+				"url": {
+					"raw": "localhost:3000/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload"
+					]
+				}
 			},
 			"response": []
 		}
